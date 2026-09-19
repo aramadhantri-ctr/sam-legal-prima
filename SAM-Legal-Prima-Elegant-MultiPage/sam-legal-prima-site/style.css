@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+
 :root {
 
     --navy: #0b1730;
@@ -103,7 +106,9 @@ input {
 
 
 .serif {
+
     font-family: 'Playfair Display', Georgia, serif;
+
 }
 
 
@@ -409,7 +414,9 @@ input {
 
 
 .hero .eyebrow {
+
     color: var(--gold2);
+
 }
 
 
@@ -555,10 +562,10 @@ input {
 
 
 /* =========================
-   PAGE HERO
+   STATS
 ========================= */
 
-.page-hero {
+.stats {
 
     background: var(--cream);
 
@@ -567,57 +574,49 @@ input {
 }
 
 
-.page-head {
+.stats-grid {
 
-    padding-top: 72px;
+    display: grid;
 
-    padding-bottom: 72px;
-
-}
-
-
-.breadcrumbs {
-
-    font-size: .85rem;
-
-    color: var(--muted);
-
-    margin-bottom: 28px;
+    grid-template-columns: repeat(4, 1fr);
 
 }
 
 
-.breadcrumbs a {
+.stat {
+
+    padding: 28px 20px;
+
+    border-right: 1px solid var(--line);
+
+}
+
+
+.stat:last-child {
+
+    border-right: 0;
+
+}
+
+
+.stat b {
+
+    display: block;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.7rem;
 
     color: var(--navy);
 
-    font-weight: 600;
-
 }
 
 
-.page-head h1 {
+.stat span {
 
-    font-family: 'Playfair Display', Georgia, serif;
-
-    color: var(--navy);
-
-    font-size: clamp(2.2rem, 4vw, 3.8rem);
-
-    line-height: 1.1;
-
-    margin: 0 0 18px;
-
-}
-
-
-.page-head > p:last-child {
-
-    max-width: 700px;
+    font-size: .82rem;
 
     color: var(--muted);
-
-    margin: 0;
 
 }
 
@@ -628,16 +627,739 @@ input {
 
 .section {
 
-    padding: 80px 0;
+    padding: 88px 0;
 
 }
 
 
-.section h2 {
+.section.alt {
+
+    background: var(--cream);
+
+}
+
+
+.section.dark {
+
+    background: var(--navy);
+
+    color: white;
+
+}
+
+
+.section-head {
+
+    max-width: 720px;
+
+    margin-bottom: 42px;
+
+}
+
+
+.section-head h2,
+.page-head h1 {
 
     font-family: 'Playfair Display', Georgia, serif;
 
+    font-size: clamp(2rem, 3.7vw, 3.1rem);
+
+    line-height: 1.12;
+
     color: var(--navy);
+
+    margin: 0 0 14px;
+
+}
+
+
+.dark .section-head h2 {
+
+    color: white;
+
+}
+
+
+.section-head p {
+
+    color: var(--muted);
+
+    margin: 0;
+
+}
+
+
+.dark .section-head p {
+
+    color: #c7cfdd;
+
+}
+
+
+.split {
+
+    display: grid;
+
+    grid-template-columns: .85fr 1.15fr;
+
+    gap: 70px;
+
+    align-items: start;
+
+}
+
+
+.copy p {
+
+    color: #596274;
+
+}
+
+
+.quote {
+
+    border-left: 3px solid var(--gold);
+
+    padding: 5px 0 5px 22px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.35rem;
+
+    color: var(--navy);
+
+    line-height: 1.45;
+
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.card {
+
+    background: white;
+
+    border: 1px solid var(--line);
+
+    padding: 28px;
+
+    box-shadow: 0 8px 28px rgba(11, 23, 48, .04);
+
+    transition: .2s;
+
+}
+
+
+.card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: var(--shadow);
+
+    border-color: #d9c18e;
+
+}
+
+
+.card .num {
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--gold);
+
+    font-size: 1.1rem;
+
+}
+
+
+.card h3 {
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--navy);
+
+    font-size: 1.25rem;
+
+    margin: 10px 0 8px;
+
+}
+
+
+.card p {
+
+    font-size: .9rem;
+
+    color: var(--muted);
+
+    margin: 0;
+
+}
+
+
+.card-link {
+
+    display: inline-flex;
+
+    margin-top: 18px;
+
+    font-size: .85rem;
+
+    font-weight: 700;
+
+    color: var(--navy);
+
+}
+
+
+.card-link:hover {
+
+    color: var(--gold);
+
+}
+
+
+/* =========================
+   FEATURE
+========================= */
+
+.feature-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 1px;
+
+    background: #dfe2e7;
+
+    border: 1px solid #dfe2e7;
+
+}
+
+
+.feature {
+
+    background: white;
+
+    padding: 25px;
+
+}
+
+
+.feature h3 {
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--navy);
+
+    font-size: 1.05rem;
+
+    margin: 10px 0 7px;
+
+}
+
+
+.feature p {
+
+    font-size: .84rem;
+
+    color: var(--muted);
+
+    margin: 0;
+
+}
+
+
+.icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    border: 1px solid #dfc991;
+
+    color: var(--gold);
+
+    display: grid;
+
+    place-items: center;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================
+   PROCESS
+========================= */
+
+.process-preview {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+
+}
+
+
+.step {
+
+    position: relative;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, .22);
+
+}
+
+
+.step b {
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--gold2);
+
+    font-size: 1.7rem;
+
+}
+
+
+.step h3 {
+
+    font-family: 'Playfair Display', serif;
+
+    margin: 8px 0;
+
+    color: white;
+
+}
+
+
+.step p {
+
+    color: #bfc8d6;
+
+    font-size: .88rem;
+
+    margin: 0;
+
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+
+    padding: 68px 0;
+
+    background: linear-gradient(
+        100deg,
+        var(--cream),
+        white
+    );
+
+}
+
+
+.cta-box {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+.cta h2 {
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--navy);
+
+    font-size: 2.1rem;
+
+    margin: 0 0 8px;
+
+}
+
+
+.cta p {
+
+    color: var(--muted);
+
+    margin: 0;
+
+}
+
+
+/* =========================
+   PAGE HERO
+========================= */
+
+.page-hero {
+
+    background: var(--cream);
+
+    border-bottom: 1px solid var(--line);
+
+    padding: 76px 0;
+
+}
+
+
+.page-head {
+
+    max-width: 780px;
+
+}
+
+
+.page-head p {
+
+    color: var(--muted);
+
+    font-size: 1rem;
+
+}
+
+
+.breadcrumbs {
+
+    font-size: .78rem;
+
+    color: #7c8492;
+
+    margin-bottom: 20px;
+
+}
+
+
+.breadcrumbs a:hover {
+
+    color: var(--gold);
+
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.service-toolbar {
+
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 30px;
+
+}
+
+
+.search {
+
+    flex: 1;
+
+    min-width: 240px;
+
+    padding: 13px 16px;
+
+    border: 1px solid #d7dae0;
+
+    background: white;
+
+    outline: none;
+
+}
+
+
+.search:focus {
+
+    border-color: var(--gold);
+
+}
+
+
+.filter {
+
+    padding: 11px 15px;
+
+    border: 1px solid #d7dae0;
+
+    background: white;
+
+    color: #4e5767;
+
+    cursor: pointer;
+
+}
+
+
+.filter.active {
+
+    background: var(--navy);
+
+    color: white;
+
+    border-color: var(--navy);
+
+}
+
+
+.service-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.service-card {
+
+    background: white;
+
+    border: 1px solid var(--line);
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 270px;
+
+    transition: .2s;
+
+}
+
+
+.service-card:hover {
+
+    border-color: #d9c18e;
+
+    box-shadow: var(--shadow);
+
+    transform: translateY(-3px);
+
+}
+
+
+.service-card .cat {
+
+    font-size: .72rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .12em;
+
+    color: var(--gold);
+
+    font-weight: 700;
+
+}
+
+
+.service-card h3 {
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--navy);
+
+    font-size: 1.3rem;
+
+    margin: 9px 0;
+
+}
+
+
+.service-card p {
+
+    font-size: .88rem;
+
+    color: var(--muted);
+
+    margin: 0;
+
+    flex: 1;
+
+}
+
+
+.meta {
+
+    border-top: 1px dashed #dfe1e5;
+
+    margin-top: 18px;
+
+    padding-top: 13px;
+
+    font-size: .78rem;
+
+    color: #727b89;
+
+}
+
+
+.empty {
+
+    text-align: center;
+
+    padding: 40px;
+
+    color: var(--muted);
+
+    grid-column: 1/-1;
+
+}
+
+
+/* =========================
+   DETAIL
+========================= */
+
+.detail-layout {
+
+    display: grid;
+
+    grid-template-columns: 1.4fr .6fr;
+
+    gap: 50px;
+
+}
+
+
+.detail-box {
+
+    background: var(--cream);
+
+    padding: 30px;
+
+    border: 1px solid var(--line);
+
+    height: max-content;
+
+}
+
+
+.detail-box h3 {
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--navy);
+
+    margin-top: 0;
+
+}
+
+
+.detail-box dl {
+
+    margin: 0;
+
+}
+
+
+.detail-box dt {
+
+    font-size: .72rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .1em;
+
+    color: var(--gold);
+
+    font-weight: 700;
+
+    margin-top: 17px;
+
+}
+
+
+.detail-box dd {
+
+    margin: 3px 0 0;
+
+    color: #4f5868;
+
+}
+
+
+.detail-content h2 {
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--navy);
+
+    font-size: 2rem;
+
+}
+
+
+.detail-content p,
+.detail-content li {
+
+    color: #596274;
+
+}
+
+
+.detail-content ul {
+
+    padding-left: 20px;
+
+}
+
+
+.legal-box {
+
+    background: var(--navy);
+
+    color: white;
+
+    padding: 30px;
+
+}
+
+
+.legal-box h3 {
+
+    font-family: 'Playfair Display', serif;
+
+    color: white;
+
+}
+
+
+.legal-box p {
+
+    color: #c8d0dc;
 
 }
 
@@ -656,8 +1378,6 @@ input {
 
     object-fit: contain;
 
-    object-position: center;
-
     display: block;
 
     border-radius: 18px;
@@ -669,7 +1389,7 @@ input {
 }
 
 
-/* TEAM CARDS */
+/* KARTU TIM */
 
 .team-cards {
 
@@ -679,12 +1399,10 @@ input {
 
     gap: 18px;
 
-    margin-top: 22px;
-
 }
 
 
-/* TEAM CARD */
+/* KARTU ANGGOTA */
 
 .team-card {
 
@@ -747,15 +1465,11 @@ input {
 
 .team-card h3 {
 
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Playfair Display', serif;
 
     color: var(--navy);
 
-    margin: 0 0 7px;
-
-    font-size: 1.08rem;
-
-    line-height: 1.3;
+    margin: 0 0 3px;
 
 }
 
@@ -764,23 +1478,11 @@ input {
 
 .team-card .role {
 
-    display: inline-block;
+    color: var(--gold);
 
-    color: #8a6815;
-
-    background: #f3ead2;
-
-    border-radius: 20px;
-
-    padding: 5px 10px;
-
-    margin-bottom: 10px;
-
-    font-size: .7rem;
+    font-size: .8rem;
 
     font-weight: 700;
-
-    line-height: 1.3;
 
 }
 
@@ -789,13 +1491,69 @@ input {
 
 .team-card p {
 
-    font-size: .82rem;
+    font-size: .88rem;
 
     color: var(--muted);
 
-    line-height: 1.6;
+}
 
-    margin: 0;
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+}
+
+
+.contact-card {
+
+    padding: 30px;
+
+    background: white;
+
+    border: 1px solid var(--line);
+
+}
+
+
+.contact-card h3 {
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--navy);
+
+    margin-top: 0;
+
+}
+
+
+.contact-card p {
+
+    color: var(--muted);
+
+}
+
+
+.contact-link {
+
+    font-weight: 700;
+
+    color: var(--navy);
+
+}
+
+
+.contact-link:hover {
+
+    color: var(--gold);
 
 }
 
@@ -806,16 +1564,11 @@ input {
 
 .site-footer {
 
-    background: var(--navy);
+    background: #071022;
 
-    color: #d9dfeb;
+    color: #c0c8d5;
 
-}
-
-
-.footer {
-
-    padding-top: 60px;
+    padding: 60px 0 20px;
 
 }
 
@@ -824,24 +1577,26 @@ input {
 
     display: grid;
 
-    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    grid-template-columns: 1.5fr 1fr 1fr 1.1fr;
 
     gap: 40px;
+
+    padding-bottom: 42px;
 
 }
 
 
 .footer-logo {
 
-    width: 72px;
+    width: 56px;
 
-    height: 72px;
+    height: 56px;
 
     object-fit: cover;
 
     border-radius: 50%;
 
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 
 }
 
@@ -850,20 +1605,21 @@ input {
 
     color: white;
 
-    margin-top: 0;
+    font-size: .82rem;
 
-    margin-bottom: 18px;
+    text-transform: uppercase;
 
-    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: .1em;
 
 }
 
 
-.footer p {
+.footer p,
+.footer a {
 
-    color: #aeb8ca;
+    font-size: .85rem;
 
-    font-size: .9rem;
+    color: #9da7b8;
 
 }
 
@@ -872,11 +1628,7 @@ input {
 
     display: block;
 
-    color: #cbd3df;
-
-    margin-bottom: 9px;
-
-    font-size: .9rem;
+    padding: 4px 0;
 
 }
 
@@ -894,31 +1646,25 @@ input {
 
     gap: 14px;
 
-    margin-top: 20px;
-
 }
 
 
 .socials a {
 
-    margin: 0;
+    color: var(--gold2);
 
 }
 
 
 .footer-bottom {
 
-    margin-top: 50px;
-
-    padding-top: 22px;
-
-    padding-bottom: 22px;
-
     border-top: 1px solid rgba(255, 255, 255, .1);
 
-    color: #8995aa;
+    padding-top: 18px;
 
-    font-size: .8rem;
+    font-size: .76rem;
+
+    color: #7f899a;
 
 }
 
@@ -935,29 +1681,36 @@ input {
 
     bottom: 22px;
 
-    width: 54px;
+    width: 55px;
 
-    height: 54px;
+    height: 55px;
 
-    display: flex;
+    border-radius: 50%;
 
-    align-items: center;
+    display: grid;
 
-    justify-content: center;
+    place-items: center;
 
     background: #25d366;
 
     color: white;
 
-    border-radius: 50%;
-
-    font-size: .75rem;
-
     font-weight: 800;
 
-    box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .22);
 
     z-index: 90;
+
+}
+
+
+.notice {
+
+    font-size: .76rem;
+
+    color: #8a92a0;
+
+    margin-top: 20px;
 
 }
 
@@ -968,31 +1721,49 @@ input {
 
 @media (max-width: 950px) {
 
-    .header-inner {
-        gap: 20px;
-    }
-
     .nav {
-        gap: 18px;
+        gap: 16px;
     }
 
-    .hero-grid {
+    .nav a {
+        font-size: .85rem;
+    }
+
+    .header-cta {
+        display: none;
+    }
+
+    .hero-grid,
+    .split,
+    .detail-layout {
         grid-template-columns: 1fr;
-        gap: 40px;
-        padding-top: 60px;
-        padding-bottom: 60px;
     }
 
-    .hero-card img {
-        height: 400px;
+    .hero-card {
+        max-width: 620px;
     }
+
+    .cards,
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-preview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* TIM DI TABLET */
 
     .team-cards {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
     }
 
 }
@@ -1000,17 +1771,8 @@ input {
 
 @media (max-width: 700px) {
 
-    .wrap {
-        padding: 0 18px;
-    }
-
     .header-inner {
         height: 72px;
-    }
-
-    .brand img {
-        width: 54px;
-        height: 54px;
     }
 
     .nav,
@@ -1026,10 +1788,18 @@ input {
         display: block;
     }
 
+    .brand img {
+        width: 54px;
+
+        height: 54px;
+    }
+
     .hero-grid {
         min-height: auto;
-        padding-top: 60px;
-        padding-bottom: 60px;
+
+        padding-top: 65px;
+
+        padding-bottom: 70px;
     }
 
     .hero h1 {
@@ -1037,17 +1807,33 @@ input {
     }
 
     .hero-card img {
-        height: 340px;
+        height: 360px;
     }
 
-    .page-head {
-        padding-top: 55px;
-        padding-bottom: 55px;
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat:nth-child(2) {
+        border-right: 0;
     }
 
     .section {
-        padding: 60px 0;
+        padding: 65px 0;
     }
+
+    .cards,
+    .service-grid,
+    .contact-grid,
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-preview {
+        grid-template-columns: 1fr;
+    }
+
+    /* TIM DI HP */
 
     .team-cards {
         grid-template-columns: 1fr;
@@ -1055,16 +1841,40 @@ input {
 
     .team-member-photo {
         width: 180px;
+
         height: 180px;
     }
 
     .footer-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
     }
 
-    .footer-bottom {
-        margin-top: 35px;
+    .cta-box {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .page-hero {
+        padding: 55px 0;
+    }
+
+    .service-toolbar {
+        display: block;
+    }
+
+    .search {
+        width: 100%;
+
+        margin-bottom: 10px;
+    }
+
+    .filter {
+        margin: 3px;
+    }
+
+    .wrap {
+        padding: 0 18px;
     }
 
 }
