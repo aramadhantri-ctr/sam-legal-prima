@@ -1,96 +1,1070 @@
-/* =========================================================
+:root {
+
+    --navy: #0b1730;
+
+    --navy2: #102244;
+
+    --gold: #c7a15a;
+
+    --gold2: #e3c989;
+
+    --white: #fff;
+
+    --cream: #f7f5ef;
+
+    --ink: #182235;
+
+    --muted: #667085;
+
+    --line: #e7e8eb;
+
+    --shadow: 0 18px 50px rgba(11, 23, 48, .10);
+
+    --max: 1180px;
+
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family: 'DM Sans', Arial, sans-serif;
+
+    color: var(--ink);
+
+    background: var(--white);
+
+    line-height: 1.65;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+button,
+input {
+    font: inherit;
+}
+
+
+.wrap {
+
+    max-width: var(--max);
+
+    margin: auto;
+
+    padding: 0 24px;
+
+}
+
+
+.eyebrow {
+
+    font-size: .78rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .16em;
+
+    font-weight: 700;
+
+    color: var(--gold);
+
+    margin: 0 0 12px;
+
+}
+
+
+.serif {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    background: rgba(255, 255, 255, .94);
+
+    backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(11, 23, 48, .08);
+
+}
+
+
+.header-inner {
+
+    height: 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+
+}
+
+
+.brand img {
+
+    width: 62px;
+
+    height: 62px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    box-shadow: 0 5px 18px rgba(11, 23, 48, .12);
+
+}
+
+
+.nav {
+
+    display: flex;
+
+    gap: 28px;
+
+    align-items: center;
+
+    margin-left: auto;
+
+}
+
+
+.nav a {
+
+    font-size: .92rem;
+
+    font-weight: 600;
+
+    color: #4d5667;
+
+    padding: 29px 0;
+
+    border-bottom: 2px solid transparent;
+
+}
+
+
+.nav a:hover,
+.nav a.active {
+
+    color: var(--navy);
+
+    border-bottom-color: var(--gold);
+
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    border-radius: 4px;
+
+    padding: 12px 21px;
+
+    font-weight: 700;
+
+    font-size: .9rem;
+
+    transition: .2s;
+
+}
+
+
+.btn-gold {
+
+    background: var(--gold);
+
+    color: #15110a;
+
+    box-shadow: 0 8px 22px rgba(199, 161, 90, .2);
+
+}
+
+
+.btn-gold:hover {
+
+    background: var(--gold2);
+
+    transform: translateY(-1px);
+
+}
+
+
+.btn-navy {
+
+    background: var(--navy);
+
+    color: white;
+
+}
+
+
+.btn-navy:hover {
+
+    background: var(--navy2);
+
+    transform: translateY(-1px);
+
+}
+
+
+.btn-outline {
+
+    border: 1px solid #cfd3da;
+
+    color: var(--navy);
+
+    background: white;
+
+}
+
+
+.btn-outline:hover {
+
+    border-color: var(--gold);
+
+    color: var(--gold);
+
+}
+
+
+/* =========================
+   MOBILE NAV
+========================= */
+
+.nav-toggle {
+
+    display: none;
+
+    margin-left: auto;
+
+    background: none;
+
+    border: 0;
+
+    padding: 8px;
+
+}
+
+
+.nav-toggle span {
+
+    display: block;
+
+    width: 25px;
+
+    height: 2px;
+
+    background: var(--navy);
+
+    margin: 5px;
+
+}
+
+
+.mobile-nav {
+
+    display: none;
+
+    padding: 0 24px 18px;
+
+    border-top: 1px solid var(--line);
+
+}
+
+
+.mobile-nav a {
+
+    display: block;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid var(--line);
+
+    font-weight: 600;
+
+}
+
+
+.mobile-nav .btn {
+
+    margin-top: 14px;
+
+    width: 100%;
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    background: linear-gradient(
+        115deg,
+        var(--navy) 0%,
+        #10264c 65%,
+        #17355f 100%
+    );
+
+    color: white;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.hero:after {
+
+    content: '';
+
+    position: absolute;
+
+    width: 520px;
+
+    height: 520px;
+
+    border: 1px solid rgba(227, 201, 137, .18);
+
+    border-radius: 50%;
+
+    right: -180px;
+
+    top: -210px;
+
+}
+
+
+.hero-grid {
+
+    min-height: 630px;
+
+    display: grid;
+
+    grid-template-columns: 1.05fr .95fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+.hero .eyebrow {
+    color: var(--gold2);
+}
+
+
+.hero h1 {
+
+    font-family: 'Playfair Display', Georgia, serif;
+
+    font-size: clamp(2.7rem, 5vw, 4.65rem);
+
+    line-height: 1.06;
+
+    font-weight: 600;
+
+    margin: 0 0 22px;
+
+    max-width: 760px;
+
+    letter-spacing: -.03em;
+
+}
+
+
+.hero p.lead {
+
+    font-size: 1.06rem;
+
+    color: #d9dfeb;
+
+    max-width: 650px;
+
+    margin: 0 0 30px;
+
+}
+
+
+.hero-actions {
+
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.hero .btn-outline {
+
+    border-color: rgba(255, 255, 255, .3);
+
+    color: white;
+
+    background: transparent;
+
+}
+
+
+.hero .btn-outline:hover {
+
+    border-color: var(--gold2);
+
+    color: var(--gold2);
+
+}
+
+
+.hero-card {
+
+    position: relative;
+
+    padding: 14px;
+
+    background: rgba(255, 255, 255, .08);
+
+    border: 1px solid rgba(255, 255, 255, .18);
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.hero-card:before {
+
+    content: '';
+
+    position: absolute;
+
+    left: -14px;
+
+    top: 28px;
+
+    width: 70px;
+
+    height: 70px;
+
+    border-left: 2px solid var(--gold);
+
+    border-top: 2px solid var(--gold);
+
+}
+
+
+.hero-card img {
+
+    width: 100%;
+
+    height: 470px;
+
+    object-fit: cover;
+
+}
+
+
+.hero-caption {
+
+    position: absolute;
+
+    bottom: 14px;
+
+    left: 14px;
+
+    right: 14px;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, .85)
+    );
+
+    padding: 70px 22px 20px;
+
+    color: white;
+
+}
+
+
+.hero-caption strong {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.2rem;
+
+}
+
+
+/* =========================
+   PAGE HERO
+========================= */
+
+.page-hero {
+
+    background: var(--cream);
+
+    border-bottom: 1px solid var(--line);
+
+}
+
+
+.page-head {
+
+    padding-top: 72px;
+
+    padding-bottom: 72px;
+
+}
+
+
+.breadcrumbs {
+
+    font-size: .85rem;
+
+    color: var(--muted);
+
+    margin-bottom: 28px;
+
+}
+
+
+.breadcrumbs a {
+
+    color: var(--navy);
+
+    font-weight: 600;
+
+}
+
+
+.page-head h1 {
+
+    font-family: 'Playfair Display', Georgia, serif;
+
+    color: var(--navy);
+
+    font-size: clamp(2.2rem, 4vw, 3.8rem);
+
+    line-height: 1.1;
+
+    margin: 0 0 18px;
+
+}
+
+
+.page-head > p:last-child {
+
+    max-width: 700px;
+
+    color: var(--muted);
+
+    margin: 0;
+
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+
+    padding: 80px 0;
+
+}
+
+
+.section h2 {
+
+    font-family: 'Playfair Display', Georgia, serif;
+
+    color: var(--navy);
+
+}
+
+
+/* =========================
    TEAM
-========================================================= */
+========================= */
 
 .team-photo {
+
     width: 100%;
+
     height: auto;
+
     max-height: none;
+
     object-fit: contain;
+
     object-position: center;
+
     display: block;
+
     border-radius: 18px;
+
     background: var(--cream);
+
     padding: 8px;
+
 }
 
 
-/* Team Cards */
+/* TEAM CARDS */
 
 .team-cards {
+
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 18px;
+
     margin-top: 22px;
+
 }
 
 
-/* Team Card */
+/* TEAM CARD */
 
 .team-card {
+
     background: white;
+
     border: 1px solid var(--line);
-    padding: 25px 18px 22px;
+
+    padding: 24px 18px 22px;
+
     text-align: center;
+
     box-shadow: 0 8px 28px rgba(11, 23, 48, .06);
+
     transition: .2s;
+
     overflow: hidden;
+
 }
+
 
 .team-card:hover {
+
     transform: translateY(-4px);
+
     box-shadow: var(--shadow);
+
     border-color: #d9c18e;
+
 }
 
 
-/* Foto Anggota */
+/* FOTO ANGGOTA */
 
 .team-member-photo {
-    width: 180px;
-    height: 180px;
+
+    width: 175px;
+
+    height: 175px;
+
     object-fit: contain;
+
     object-position: center;
+
     display: block;
+
     margin: 0 auto 18px;
+
     border-radius: 50%;
+
     background: var(--cream);
+
     border: 4px solid #f3ead2;
-    padding: 4px;
+
+    padding: 5px;
+
 }
 
 
-/* Nama */
+/* NAMA */
 
 .team-card h3 {
-    font-family: 'Playfair Display', serif;
+
+    font-family: 'Playfair Display', Georgia, serif;
+
     color: var(--navy);
+
     margin: 0 0 7px;
+
     font-size: 1.08rem;
+
     line-height: 1.3;
+
 }
 
 
-/* Jabatan */
+/* JABATAN */
 
 .team-card .role {
+
     display: inline-block;
+
     color: #8a6815;
+
     background: #f3ead2;
+
     border-radius: 20px;
+
     padding: 5px 10px;
+
     margin-bottom: 10px;
+
     font-size: .7rem;
+
     font-weight: 700;
+
     line-height: 1.3;
+
 }
 
 
-/* Deskripsi */
+/* DESKRIPSI */
 
 .team-card p {
+
     font-size: .82rem;
+
     color: var(--muted);
+
     line-height: 1.6;
+
     margin: 0;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+
+    background: var(--navy);
+
+    color: #d9dfeb;
+
+}
+
+
+.footer {
+
+    padding-top: 60px;
+
+}
+
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+
+    gap: 40px;
+
+}
+
+
+.footer-logo {
+
+    width: 72px;
+
+    height: 72px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    margin-bottom: 18px;
+
+}
+
+
+.footer h3 {
+
+    color: white;
+
+    margin-top: 0;
+
+    margin-bottom: 18px;
+
+    font-family: 'Playfair Display', Georgia, serif;
+
+}
+
+
+.footer p {
+
+    color: #aeb8ca;
+
+    font-size: .9rem;
+
+}
+
+
+.footer a {
+
+    display: block;
+
+    color: #cbd3df;
+
+    margin-bottom: 9px;
+
+    font-size: .9rem;
+
+}
+
+
+.footer a:hover {
+
+    color: var(--gold2);
+
+}
+
+
+.socials {
+
+    display: flex;
+
+    gap: 14px;
+
+    margin-top: 20px;
+
+}
+
+
+.socials a {
+
+    margin: 0;
+
+}
+
+
+.footer-bottom {
+
+    margin-top: 50px;
+
+    padding-top: 22px;
+
+    padding-bottom: 22px;
+
+    border-top: 1px solid rgba(255, 255, 255, .1);
+
+    color: #8995aa;
+
+    font-size: .8rem;
+
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.wa {
+
+    position: fixed;
+
+    right: 22px;
+
+    bottom: 22px;
+
+    width: 54px;
+
+    height: 54px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #25d366;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: .75rem;
+
+    font-weight: 800;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+
+    z-index: 90;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+
+    .header-inner {
+        gap: 20px;
+    }
+
+    .nav {
+        gap: 18px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .hero-card img {
+        height: 400px;
+    }
+
+    .team-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .wrap {
+        padding: 0 18px;
+    }
+
+    .header-inner {
+        height: 72px;
+    }
+
+    .brand img {
+        width: 54px;
+        height: 54px;
+    }
+
+    .nav,
+    .header-cta {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .mobile-nav.open {
+        display: block;
+    }
+
+    .hero-grid {
+        min-height: auto;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .hero h1 {
+        font-size: 2.55rem;
+    }
+
+    .hero-card img {
+        height: 340px;
+    }
+
+    .page-head {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .team-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .team-member-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        margin-top: 35px;
+    }
+
 }
