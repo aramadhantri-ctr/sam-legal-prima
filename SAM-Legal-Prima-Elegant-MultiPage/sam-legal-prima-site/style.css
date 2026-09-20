@@ -243,10 +243,10 @@ input {
 }
 
 .header-inner {
-    height: 105px;
+    height: 118px;
     display: flex;
     align-items: center;
-    gap: 45px;
+    gap: 48px;
 }
 
 .brand {
@@ -256,8 +256,8 @@ input {
 }
 
 .brand img {
-    width: 250px;
-    height: 82px;
+    width: 300px;
+    height: 100px;
     object-fit: contain;
     object-position: center;
     display: block;
@@ -268,7 +268,7 @@ input {
 
 .nav {
     display: flex;
-    gap: 30px;
+    gap: 32px;
     align-items: center;
     margin-left: auto;
 }
