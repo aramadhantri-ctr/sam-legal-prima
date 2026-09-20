@@ -237,16 +237,16 @@ input {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(251, 248, 241, .92);
+    background: rgba(251, 248, 241, .96);
     backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--line);
 }
 
 .header-inner {
-    height: 84px;
+    height: 105px;
     display: flex;
     align-items: center;
-    gap: 36px;
+    gap: 45px;
 }
 
 .brand {
@@ -256,12 +256,12 @@ input {
 }
 
 .brand img {
-    width: 185px;
-    height: 68px;
+    width: 250px;
+    height: 82px;
     object-fit: contain;
     object-position: center;
     display: block;
-    border-radius: 4px;
+    border-radius: 0;
     box-shadow: none;
     mix-blend-mode: multiply;
 }
