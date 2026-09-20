@@ -1264,11 +1264,14 @@ input {
 }
 
 .footer-logo {
-    width: auto;
-    height: 42px;
+    width: 250px;
+    height: 75px;
     object-fit: contain;
-    border-radius: 4px;
-    margin-bottom: 16px;
+    object-position: left center;
+    display: block;
+    border-radius: 0;
+    margin-bottom: 18px;
+    mix-blend-mode: screen;
 }
 
 .footer h3 {
