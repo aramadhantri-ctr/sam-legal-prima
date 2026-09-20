@@ -263,6 +263,7 @@ input {
     display: block;
     border-radius: 4px;
     box-shadow: none;
+    mix-blend-mode: multiply;
 }
 
 .nav {
@@ -1434,14 +1435,14 @@ input {
         display: block;
     }
 
-   .brand img {
+  .brand img {
     width: 135px;
     height: 52px;
     object-fit: contain;
     object-position: center;
     display: block;
+    mix-blend-mode: multiply;
 }
-
     .hero-grid {
         min-height: auto;
         padding-top: 65px;
