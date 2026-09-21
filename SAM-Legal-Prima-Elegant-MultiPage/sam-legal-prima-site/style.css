@@ -131,6 +131,159 @@ body {
     }
 }
 
+/* =========================================================
+   TAMBAHAN BARU — segel emas animasi & sapuan cahaya hero
+   (blok ini murni tambahan, tidak mengubah kode di atas)
+========================================================= */
+
+.seal-strip {
+    background:
+        radial-gradient(500px 300px at 15% 20%, rgba(218, 185, 120, .10), transparent 65%),
+        var(--navy);
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(218, 185, 120, .18);
+    border-bottom: 1px solid rgba(218, 185, 120, .18);
+}
+
+.seal-strip-inner {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+}
+
+.seal-wrap {
+    position: relative;
+    width: 118px;
+    height: 118px;
+    flex-shrink: 0;
+}
+
+.seal-glow {
+    position: absolute;
+    inset: -22px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(218, 185, 120, .30), transparent 70%);
+    animation: sealPulse 3.4s ease-in-out infinite;
+}
+
+.brand-seal {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: visible;
+}
+
+.brand-seal circle,
+.brand-seal path {
+    fill: none;
+    stroke: var(--gold-2);
+}
+
+.seal-ring-outer {
+    stroke-width: 1;
+    stroke-dasharray: 3 7;
+    opacity: .55;
+    transform-origin: 100px 100px;
+    animation: sealRotate 60s linear infinite;
+}
+
+.seal-ring-inner {
+    stroke-width: 1;
+    opacity: .3;
+}
+
+.seal-ring {
+    stroke-width: 1.6;
+    stroke-dasharray: 478;
+    stroke-dashoffset: 478;
+}
+
+.seal-check {
+    stroke-width: 7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 95;
+    stroke-dashoffset: 95;
+}
+
+.seal-strip-inner.in-view .seal-ring {
+    animation: sealDrawRing 1.5s cubic-bezier(.2, .7, .2, 1) forwards .25s;
+}
+
+.seal-strip-inner.in-view .seal-check {
+    animation: sealDrawCheck .6s ease forwards 1.6s;
+}
+
+.seal-strip-text h2 {
+    color: white;
+    font-weight: 600;
+    font-size: 1.55rem;
+    line-height: 1.35;
+    margin: 8px 0 0;
+    max-width: 34ch;
+}
+
+.seal-strip .eyebrow {
+    color: var(--gold-2);
+    margin-bottom: 0;
+}
+
+@keyframes sealDrawRing {
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes sealDrawCheck {
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes sealRotate {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes sealPulse {
+    0%, 100% { opacity: .5; transform: scale(1); }
+    50% { opacity: .95; transform: scale(1.08); }
+}
+
+@media (max-width: 700px) {
+    .seal-strip-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+    }
+}
+
+/* Sapuan cahaya emas lembut yang bergerak pelan di background hero */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(120deg, transparent 30%, rgba(218, 185, 120, .07) 50%, transparent 70%);
+    background-size: 250% 250%;
+    animation: heroSheen 16s ease-in-out infinite;
+}
+
+@keyframes heroSheen {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero::before,
+    .seal-glow,
+    .seal-ring-outer {
+        animation: none !important;
+    }
+    .seal-ring,
+    .seal-check {
+        stroke-dashoffset: 0 !important;
+        animation: none !important;
+    }
+}
+
 :root {
     --navy: #0A0F1E;
     --navy-2: #141F38;
