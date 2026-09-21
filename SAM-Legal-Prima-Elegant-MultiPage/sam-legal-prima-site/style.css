@@ -426,11 +426,14 @@ input {
 }
 
 .brand img {
-    height: 48px;
-    width: auto;
+    width: 300px;
+    height: 100px;
     object-fit: contain;
-    border-radius: 4px;
-    box-shadow: 0 6px 18px rgba(10, 15, 30, .10);
+    object-position: center;
+    display: block;
+    border-radius: 0;
+    box-shadow: none;
+    mix-blend-mode: multiply;
 }
 
 .nav {
@@ -1432,11 +1435,14 @@ input {
 }
 
 .footer-logo {
-    width: auto;
-    height: 42px;
+    width: 250px;
+    height: 75px;
     object-fit: contain;
-    border-radius: 4px;
-    margin-bottom: 16px;
+    object-position: left center;
+    display: block;
+    border-radius: 0;
+    margin-bottom: 18px;
+    mix-blend-mode: screen;
 }
 
 .footer h3 {
@@ -1604,9 +1610,15 @@ input {
     }
 
     .brand img {
-        height: 40px;
-        width: auto;
-    }
+    width: 165px;
+    height: 58px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    border-radius: 0;
+    box-shadow: none;
+    mix-blend-mode: multiply;
+}
 
     .hero-grid {
         min-height: auto;
