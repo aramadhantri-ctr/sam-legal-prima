@@ -4,7 +4,7 @@ const search=document.querySelector('#serviceSearch');const filters=[...document
 /* Animasi muncul saat elemen di-scroll ke layar (progressive enhancement, aman tanpa JS) */
 (function(){
     var targets = document.querySelectorAll(
-        '.card, .service-card, .team-card, .feature, .contact-card, .step, .stat, .section-head, .quote, .team-photo'
+        '.card, .service-card, .team-card, .feature, .contact-card, .step, .stat, .section-head, .quote, .team-photo, .seal-strip-inner'
     );
     if (!targets.length) return;
     if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
